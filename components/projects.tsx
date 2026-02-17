@@ -10,6 +10,7 @@ const projects = [
     tags: ["Agentic AI", "Next.js", "Node.js", "Amazon EC2", "LLM Integration", "Real-time Data"],
     period: "2024 – Present",
     impact: "AI Platform",
+    link: "https://www.chatley.ai/",
   },
   {
     title: "MavenX.gg",
@@ -71,12 +72,15 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div
+            <a
               key={index}
+              href={project.link || "#"}
+              target={project.link ? "_blank" : undefined}
+              rel={project.link ? "noopener noreferrer" : undefined}
               ref={(el) => {
                 itemRefs.current[index] = el
               }}
-              className="opacity-0 group p-8 rounded-xl border border-border/50 hover:border-accent/50 transition-all duration-300 hover:bg-card/50 hover:shadow-lg hover:shadow-accent/10 flex flex-col"
+              className="opacity-0 group p-8 rounded-xl border border-border/50 hover:border-accent/50 transition-all duration-300 hover:bg-card/50 hover:shadow-lg hover:shadow-accent/10 flex flex-col cursor-pointer"
             >
               <div className="flex items-start justify-between mb-4">
                 <h3 className="text-2xl font-bold group-hover:text-accent transition-colors flex-1">{project.title}</h3>
@@ -104,7 +108,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
