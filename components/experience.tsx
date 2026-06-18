@@ -4,13 +4,13 @@ import { useEffect, useRef } from "react"
 
 const experiences = [
   {
-    title: "Tech Team Lead",
+    title: "Development Head",
     company: "Forthlogic AI",
     period: "07/2025 – Present",
     location: "Remote, USA",
     duration: "Current",
     description:
-      "Leading a distributed engineering team with 5+ developers. Developed live call streaming for AI voice agents. Reduced production bugs by 25% through improved CI/CD processes. Integrated AI SDK for tool calling and implemented guardrails. Drove revenue-generating strategies and cost optimization.",
+      "Leading a distributed engineering team with 5+ developers. Developed live call streaming and SMS features for AI voice agents. Reduced production bugs by 25% through improved CI/CD processes. Integrated AI SDK for tool calling and implemented guardrails. Drove revenue-generating strategies and cost optimization.",
     highlights: ["Team Leadership", "Live Call Streaming", "AI SDK", "CI/CD", "Guardrails"],
   },
   {
