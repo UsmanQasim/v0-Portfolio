@@ -78,7 +78,7 @@ export default function Skills() {
   }, [])
 
   return (
-    <section id="skills" className="py-24 px-6 relative overflow-hidden">
+    <section id="skills" className="py-16 px-6 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
@@ -93,7 +93,7 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <div
               key={index}
@@ -159,7 +159,7 @@ export default function Skills() {
         </div>
 
         {/* Stats section */}
-        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { label: "Years Experience", value: "5+" },
             { label: "Components Built", value: "40+" },
