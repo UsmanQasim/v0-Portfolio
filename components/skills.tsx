@@ -84,16 +84,16 @@ export default function Skills() {
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Skills & Expertise</h2>
           <div className="w-12 h-1 bg-accent mb-8 rounded-full" />
-          <p className="text-lg text-blue-300 max-w-2xl">
+          <p className="text-lg text-blue-300 max-w-3xl">
             5+ years building scalable systems with expertise in AI-powered platforms, live streaming infrastructure, and team leadership.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <div
               key={index}
@@ -110,40 +110,40 @@ export default function Skills() {
               />
 
               {/* Card with epic border and glow effect */}
-              <div className="relative p-8 rounded-2xl border border-border/50 group-hover:border-accent/50 bg-card/30 backdrop-blur-sm transition-all duration-500 group-hover:bg-card/60 group-hover:shadow-2xl group-hover:shadow-accent/20">
+              <div className="relative p-6 rounded-2xl border border-border/50 group-hover:border-accent/50 bg-card/30 backdrop-blur-sm transition-all duration-500 group-hover:bg-card/60 group-hover:shadow-2xl group-hover:shadow-accent/20 h-full">
                 {/* Top accent line that expands on hover */}
                 <div className="absolute top-0 left-0 h-1 bg-gradient-to-r from-accent to-transparent rounded-t-2xl w-0 group-hover:w-full transition-all duration-500" />
 
                 {/* Icon and category header */}
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="text-3xl">{category.icon}</div>
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
+                <div className="flex items-center gap-2 mb-5">
+                  <div className="text-2xl">{category.icon}</div>
+                  <h3 className="text-lg font-bold text-foreground group-hover:text-accent transition-colors duration-300">
                     {category.category}
                   </h3>
                 </div>
 
                 {/* Skills grid with staggered animation on hover */}
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {category.skills.map((skill, i) => (
                     <div
                       key={i}
-                      className={`flex items-center gap-3 group/skill transition-all duration-300 ${
-                        hoveredIndex === index ? "translate-x-2" : ""
+                      className={`flex items-center gap-2 group/skill transition-all duration-300 ${
+                        hoveredIndex === index ? "translate-x-1" : ""
                       }`}
                       style={{
-                        transitionDelay: hoveredIndex === index ? `${i * 50}ms` : "0ms",
+                        transitionDelay: hoveredIndex === index ? `${i * 40}ms` : "0ms",
                       }}
                     >
                       {/* Animated dot indicator */}
-                      <div className="relative w-2 h-2">
-                        <div className="absolute inset-0 w-2 h-2 rounded-full bg-accent group-hover/skill:scale-150 transition-transform duration-300" />
-                        <div className="absolute inset-0 w-2 h-2 rounded-full bg-accent/50 animate-pulse group-hover/skill:animate-none" />
+                      <div className="relative w-1.5 h-1.5">
+                        <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-accent group-hover/skill:scale-150 transition-transform duration-300" />
+                        <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-accent/50 animate-pulse group-hover/skill:animate-none" />
                       </div>
 
                       {/* Skill badge with hover effect */}
                       <Badge
                         variant="secondary"
-                        className="bg-accent/10 text-foreground hover:bg-accent/20 group-hover/skill:bg-accent/30 transition-all duration-300 cursor-default"
+                        className="bg-accent/10 text-foreground hover:bg-accent/20 group-hover/skill:bg-accent/30 transition-all duration-300 cursor-default text-xs py-1"
                       >
                         {skill}
                       </Badge>
@@ -159,7 +159,7 @@ export default function Skills() {
         </div>
 
         {/* Stats section */}
-        <div className="mt-20 grid md:grid-cols-4 gap-6">
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { label: "Years Experience", value: "5+" },
             { label: "Components Built", value: "40+" },
