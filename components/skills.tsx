@@ -5,47 +5,40 @@ import { Badge } from "@/components/ui/badge"
 
 const skillCategories = [
   {
-    category: "Frontend & AI",
+    category: "Frontend",
     icon: "⚡",
-    skills: ["Next.js", "React.js", "TypeScript", "Agentic AI", "LLM Integration", "Tailwind CSS"],
+    skills: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Material UI"],
     color: "from-blue-500 to-cyan-500",
   },
   {
-    category: "Backend & Cloud",
-    icon: "🔧",
-    skills: ["Node.js", "ASP.NET Core", "Express.js", "Amazon EC2", "Azure", "PostgreSQL"],
+    category: "AI & Backend",
+    icon: "🤖",
+    skills: ["Agentic AI", "AI SDK", "Live Call Streaming", "Node.js", "Express.js", "ASP.NET Core"],
     color: "from-purple-500 to-pink-500",
   },
   {
-    category: "Database & State",
-    icon: "📊",
-    skills: ["PostgreSQL", "SQL Server", "MongoDB", "React Query", "Redux Toolkit", "Firebase"],
+    category: "Data & Performance",
+    icon: "⚙️",
+    skills: ["React Query", "Caching Optimization", "PostgreSQL", "SQL Server", "MongoDB", "Redux Toolkit"],
     color: "from-green-500 to-emerald-500",
   },
   {
-    category: "DevOps & Testing",
-    icon: "🚀",
-    skills: ["Azure DevOps", "AWS", "Docker", "Jest", "Playwright", "Selenium", "CI/CD"],
+    category: "Cloud & DevOps",
+    icon: "☁️",
+    skills: ["Amazon EC2", "Azure", "CI/CD", "Docker", "Azure DevOps", "Guardrails"],
     color: "from-orange-500 to-red-500",
   },
   {
-    category: "Leadership & Design",
-    icon: "👥",
-    skills: [
-      "Team Mentorship",
-      "Code Review",
-      "Architecture Design",
-      "Design Systems",
-      "Agile",
-      "Technical Leadership",
-    ],
-    color: "from-indigo-500 to-blue-500",
+    category: "Testing & Tools",
+    icon: "✓",
+    skills: ["Jest", "Playwright", "Selenium", "REST APIs", "Microservices", "Component Design"],
+    color: "from-cyan-500 to-blue-500",
   },
   {
-    category: "Visualization & Tools",
-    icon: "🎨",
-    skills: ["Recharts", "Framer Motion", "Material UI", "Shadcn UI", "REST APIs", "Microservices"],
-    color: "from-yellow-500 to-orange-500",
+    category: "Team Leadership",
+    icon: "👥",
+    skills: ["Team Mentorship", "Code Review", "Architecture Design", "Technical Strategy", "System Design"],
+    color: "from-indigo-500 to-purple-500",
   },
 ]
 
@@ -83,9 +76,8 @@ export default function Skills() {
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Skills & Expertise</h2>
           <div className="w-12 h-1 bg-accent mb-8 rounded-full" />
-          <p className="text-lg text-foreground/80 max-w-2xl">
-            A comprehensive toolkit built over 5+ years, specializing in Agentic AI, cloud infrastructure, and
-            full-stack development.
+          <p className="text-lg text-blue-300 max-w-2xl">
+            5+ years building scalable systems with expertise in AI-powered platforms, live streaming infrastructure, and team leadership.
           </p>
         </div>
 
@@ -158,9 +150,9 @@ export default function Skills() {
         <div className="mt-20 grid md:grid-cols-4 gap-6">
           {[
             { label: "Years Experience", value: "5+" },
-            { label: "Projects Shipped", value: "15+" },
-            { label: "Team Members Led", value: "8+" },
-            { label: "Technologies", value: "25+" },
+            { label: "Components Built", value: "40+" },
+            { label: "Team Size Led", value: "5+" },
+            { label: "Bug Reduction", value: "25%" },
           ].map((stat, i) => (
             <div
               key={i}
@@ -169,7 +161,7 @@ export default function Skills() {
               <div className="text-3xl font-bold text-accent group-hover:scale-110 transition-transform duration-300">
                 {stat.value}
               </div>
-              <div className="text-sm text-foreground/70 mt-2">{stat.label}</div>
+              <div className="text-sm text-blue-300 mt-2">{stat.label}</div>
             </div>
           ))}
         </div>
