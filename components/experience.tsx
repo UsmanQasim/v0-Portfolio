@@ -4,44 +4,44 @@ import { useEffect, useRef } from "react"
 
 const experiences = [
   {
-    title: "Frontend Lead | Full Stack Developer",
+    title: "Development Head",
     company: "Forthlogic AI",
-    period: "2024/08 – Present",
+    period: "07/2025 – Present",
     location: "Remote, USA",
-    duration: "6 months",
+    duration: "Current",
     description:
-      "Leading frontend architecture and development for AI-powered enterprise solutions. Architecting Agentic AI systems with Node.js backends and cloud infrastructure. Mentoring engineers and establishing engineering best practices.",
-    highlights: ["Agentic AI", "Next.js", "Node.js", "AWS EC2", "Team Leadership", "Architecture"],
+      "Leading a distributed engineering team with 5+ developers. Developed live call streaming and SMS features for AI voice agents. Reduced production bugs by 25% through improved CI/CD processes. Integrated AI SDK for tool calling and implemented guardrails. Drove revenue-generating strategies and cost optimization.",
+    highlights: ["Team Leadership", "Live Call Streaming", "AI SDK", "CI/CD", "Guardrails"],
   },
   {
     title: "Frontend Developer - React/Next.js",
     company: "A3E Systems",
-    period: "2024/08 – 2025/02",
+    period: "08/2024 – 02/2025",
     location: "Remote",
-    duration: "7 months",
+    duration: "6 months",
     description:
-      "Developed reusable and responsive UI components using Tailwind CSS and TypeScript. Integrated React Query for efficient server-state handling and focused on UI/UX improvements and codebase maintainability.",
-    highlights: ["React Query", "TypeScript", "Tailwind CSS", "Component Design"],
+      "Built 40+ reusable UI components reducing frontend dev time by 35%. Implemented React Query caching and optimistic updates, reducing API requests by 30%. Optimized frontend data flow and refactored shared components across modules.",
+    highlights: ["React Query", "Component Architecture", "Tailwind CSS", "Performance"],
   },
   {
-    title: "Frontend Engineer - React/Next.js",
-    company: "Whetstonez PVT LTD",
-    period: "2023/06 – 2024/06",
-    location: "Lahore, Pakistan",
-    duration: "1 year",
-    description:
-      "Built a real-time game streaming platform with Next.js and Tailwind CSS. Delivered feature-rich, mobile-first UIs and collaborated with designers and backend engineers on MavenX.gg.",
-    highlights: ["Next.js", "Real-time Features", "Mobile-first", "Recharts"],
-  },
-  {
-    title: "Full Stack Developer - React | ASP.NET Core",
-    company: "Route Trading LTD",
-    period: "2021/05 – 2023/04",
+    title: "Frontend Lead & Full Stack Developer",
+    company: "MTBS Route Trading",
+    period: "01/2021 – 07/2025",
     location: "Remote, UK",
-    duration: "2 years",
+    duration: "4.5 years",
     description:
-      "Transitioned from Trainee to Full Stack Developer leading initiatives in healthcare and fintech apps. Delivered high-quality code on both frontend (React, Next.js) and backend (ASP.NET Core, SQL Server).",
-    highlights: ["React", "ASP.NET Core", "SQL Server", "Fintech", "Healthcare"],
+      "Led frontend architecture for enterprise web solutions using Next.js and ASP.NET backends. Mentored junior developers and conducted code reviews. Implemented advanced caching reducing data retrieval times by 70%. Collaborated with UI/UX and QA teams on scalable features.",
+    highlights: ["Next.js", "Team Mentorship", "Caching Optimization", "ASP.NET", "Architecture"],
+  },
+  {
+    title: "Bachelor of Computer Science",
+    company: "PMAS University, Rawalpindi",
+    period: "Graduated",
+    location: "Rawalpindi",
+    duration: "4 years",
+    description:
+      "Team project leader and teaching assistant for core courses. Participated in tech seminars and hackathons. Built strong foundation in software engineering, data structures, and system design.",
+    highlights: ["Project Leadership", "Teaching Assistant", "System Design", "Academics"],
   },
 ]
 

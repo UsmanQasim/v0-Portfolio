@@ -6,10 +6,9 @@ import Link from "next/link"
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const nameRef = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLHeadingElement>(null)
+  const titleRef = useRef<HTMLDivElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
   const ctaRef = useRef<HTMLDivElement>(null)
-  const statsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,7 +21,7 @@ export default function Hero() {
       },
       { threshold: 0.1 },
     )
-    ;[nameRef, titleRef, subtitleRef, statsRef, ctaRef].forEach((ref) => {
+    ;[nameRef, titleRef, subtitleRef, ctaRef].forEach((ref) => {
       if (ref.current) observer.observe(ref.current)
     })
 
@@ -42,66 +41,22 @@ export default function Hero() {
 
       <div ref={containerRef} className="max-w-5xl mx-auto w-full">
         <div className="flex flex-col justify-center">
-          {/* Name and Title Combined */}
-          <div ref={nameRef} className="opacity-0 mb-6">
-            <div className="flex flex-col gap-2 mb-4">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none">Usman Qasim</h1>
-              <div className="h-1.5 w-32 bg-gradient-to-r from-accent via-accent/50 to-transparent rounded-full" />
-            </div>
-            <p className="text-xl md:text-2xl text-foreground/70 font-medium tracking-wide">
-              Frontend Lead & Full Stack Developer
+          {/* Minimalistic Hero */}
+          <div ref={nameRef} className="opacity-0 mb-8">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight mb-2">
+              Usman Qasim
+            </h1>
+            <div className="h-1.5 w-40 bg-gradient-to-r from-accent to-accent/50 rounded-full" />
+          </div>
+
+          {/* Minimal Description */}
+          <div ref={titleRef} className="opacity-0 mb-8 flex flex-col gap-4">
+            <p className="text-xl md:text-2xl font-medium text-blue-300">
+              Senior Full Stack Engineer • AI Systems • Tech Lead
             </p>
-          </div>
-
-          {/* Main Headline with Badge */}
-          <div ref={titleRef} className="opacity-0 mb-6 flex flex-col gap-3">
-            <div className="inline-flex w-fit gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/30 backdrop-blur-sm">
-              <span className="inline-block w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-xs font-medium text-accent uppercase tracking-widest">
-                Specialized in Agentic AI
-              </span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl">
-              <span className="block">Building Scalable</span>
-              <span className="gradient-text block text-5xl md:text-6xl lg:text-7xl">Enterprise Systems</span>
-              <span className="block">with Modern Tech</span>
-            </h2>
-          </div>
-
-          {/* Compact Description */}
-          <p
-            ref={subtitleRef}
-            className="opacity-0 stagger-1 text-base md:text-lg text-foreground/75 leading-relaxed max-w-3xl mb-6"
-          >
-            5+ years architecting web applications. Currently leading frontend at{" "}
-            <span className="text-accent font-semibold">Forthlogic AI (USA)</span>, specializing in Agentic AI systems.
-            Proven expertise across fintech, healthcare, and streaming platforms.
-          </p>
-
-          {/* Stats in Single Row */}
-          <div ref={statsRef} className="opacity-0 stagger-2 grid grid-cols-3 gap-4 mb-8 w-fit">
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative px-4 py-3 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors">
-                <div className="text-2xl md:text-3xl font-bold text-accent">5+</div>
-                <div className="text-xs text-foreground/60 mt-1">Yrs Experience</div>
-              </div>
-            </div>
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative px-4 py-3 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors">
-                <div className="text-2xl md:text-3xl font-bold text-accent">15+</div>
-                <div className="text-xs text-foreground/60 mt-1">Projects</div>
-              </div>
-            </div>
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative px-4 py-3 rounded-lg border border-accent/20 hover:border-accent/50 transition-colors">
-                <div className="text-2xl md:text-3xl font-bold text-accent">8+</div>
-                <div className="text-xs text-foreground/60 mt-1">Team Members</div>
-              </div>
-            </div>
+            <p ref={subtitleRef} className="text-base md:text-lg text-foreground/75 leading-relaxed max-w-2xl">
+              5+ years building scalable SaaS & AI platforms. Specialized in Next.js, TypeScript, and agentic AI.
+            </p>
           </div>
 
           {/* CTA Buttons */}

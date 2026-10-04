@@ -5,46 +5,51 @@ import { Badge } from "@/components/ui/badge"
 
 const skillCategories = [
   {
-    category: "Frontend & AI",
+    category: "Frontend",
     icon: "⚡",
-    skills: ["Next.js", "React.js", "TypeScript", "Agentic AI", "LLM Integration", "Tailwind CSS"],
+    skills: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "JavaScript", "Material UI", "Framer Motion"],
     color: "from-blue-500 to-cyan-500",
   },
   {
-    category: "Backend & Cloud",
-    icon: "🔧",
-    skills: ["Node.js", "ASP.NET Core", "Express.js", "Amazon EC2", "Azure", "PostgreSQL"],
+    category: "Backend & AI",
+    icon: "🤖",
+    skills: ["Node.js", "Express.js", "Hono.js", "NestJS", "ASP.NET Core", "GraphQL", "Socket.io", "Agentic AI"],
     color: "from-purple-500 to-pink-500",
   },
   {
-    category: "Database & State",
-    icon: "📊",
-    skills: ["PostgreSQL", "SQL Server", "MongoDB", "React Query", "Redux Toolkit", "Firebase"],
+    category: "AI Engineering",
+    icon: "🧠",
+    skills: ["LLM Integration", "Tool Calling", "RAG", "Prompt Engineering", "Anthropic Claude SDK", "OpenAI APIs", "AI Guardrails"],
+    color: "from-pink-500 to-rose-500",
+  },
+  {
+    category: "Databases & State",
+    icon: "💾",
+    skills: ["PostgreSQL", "MongoDB", "Redis", "SQL Server", "Firebase", "React Query", "Redux Toolkit", "Zustand"],
     color: "from-green-500 to-emerald-500",
   },
   {
-    category: "DevOps & Testing",
-    icon: "🚀",
-    skills: ["Azure DevOps", "AWS", "Docker", "Jest", "Playwright", "Selenium", "CI/CD"],
+    category: "Cloud & DevOps",
+    icon: "☁️",
+    skills: ["AWS (EC2, S3, Amplify)", "Azure DevOps", "Docker", "CI/CD Pipelines", "Deployment Automation", "Git Workflows"],
     color: "from-orange-500 to-red-500",
   },
   {
-    category: "Leadership & Design",
-    icon: "👥",
-    skills: [
-      "Team Mentorship",
-      "Code Review",
-      "Architecture Design",
-      "Design Systems",
-      "Agile",
-      "Technical Leadership",
-    ],
-    color: "from-indigo-500 to-blue-500",
+    category: "Testing & Tools",
+    icon: "✓",
+    skills: ["Jest", "React Testing Library", "Playwright", "Selenium", "SonarQube", "Postman", "Microservices", "REST APIs"],
+    color: "from-cyan-500 to-blue-500",
   },
   {
-    category: "Visualization & Tools",
-    icon: "🎨",
-    skills: ["Recharts", "Framer Motion", "Material UI", "Shadcn UI", "REST APIs", "Microservices"],
+    category: "Project Management",
+    icon: "📋",
+    skills: ["Agile Scrum", "Git", "GitHub", "Jira", "Bitbucket", "Atlassian Suite", "Workflow Automation", "n8n"],
+    color: "from-indigo-500 to-purple-500",
+  },
+  {
+    category: "Performance & Architecture",
+    icon: "🏗️",
+    skills: ["Performance Tuning", "Caching Optimization", "WebSocket", "Electron.js", "Cross-browser Compatibility", "System Design"],
     color: "from-yellow-500 to-orange-500",
   },
 ]
@@ -73,19 +78,18 @@ export default function Skills() {
   }, [])
 
   return (
-    <section id="skills" className="py-24 px-6 relative overflow-hidden">
+    <section id="skills" className="py-16 px-6 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Skills & Expertise</h2>
           <div className="w-12 h-1 bg-accent mb-8 rounded-full" />
-          <p className="text-lg text-foreground/80 max-w-2xl">
-            A comprehensive toolkit built over 5+ years, specializing in Agentic AI, cloud infrastructure, and
-            full-stack development.
+          <p className="text-lg text-blue-300 max-w-3xl">
+            5+ years building scalable systems with expertise in AI-powered platforms, live streaming infrastructure, and team leadership.
           </p>
         </div>
 
@@ -106,40 +110,40 @@ export default function Skills() {
               />
 
               {/* Card with epic border and glow effect */}
-              <div className="relative p-8 rounded-2xl border border-border/50 group-hover:border-accent/50 bg-card/30 backdrop-blur-sm transition-all duration-500 group-hover:bg-card/60 group-hover:shadow-2xl group-hover:shadow-accent/20">
+              <div className="relative p-6 rounded-2xl border border-border/50 group-hover:border-accent/50 bg-card/30 backdrop-blur-sm transition-all duration-500 group-hover:bg-card/60 group-hover:shadow-2xl group-hover:shadow-accent/20 h-full">
                 {/* Top accent line that expands on hover */}
                 <div className="absolute top-0 left-0 h-1 bg-gradient-to-r from-accent to-transparent rounded-t-2xl w-0 group-hover:w-full transition-all duration-500" />
 
                 {/* Icon and category header */}
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="text-3xl">{category.icon}</div>
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
+                <div className="flex items-center gap-2 mb-5">
+                  <div className="text-2xl">{category.icon}</div>
+                  <h3 className="text-lg font-bold text-foreground group-hover:text-accent transition-colors duration-300">
                     {category.category}
                   </h3>
                 </div>
 
                 {/* Skills grid with staggered animation on hover */}
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {category.skills.map((skill, i) => (
                     <div
                       key={i}
-                      className={`flex items-center gap-3 group/skill transition-all duration-300 ${
-                        hoveredIndex === index ? "translate-x-2" : ""
+                      className={`flex items-center gap-2 group/skill transition-all duration-300 ${
+                        hoveredIndex === index ? "translate-x-1" : ""
                       }`}
                       style={{
-                        transitionDelay: hoveredIndex === index ? `${i * 50}ms` : "0ms",
+                        transitionDelay: hoveredIndex === index ? `${i * 40}ms` : "0ms",
                       }}
                     >
                       {/* Animated dot indicator */}
-                      <div className="relative w-2 h-2">
-                        <div className="absolute inset-0 w-2 h-2 rounded-full bg-accent group-hover/skill:scale-150 transition-transform duration-300" />
-                        <div className="absolute inset-0 w-2 h-2 rounded-full bg-accent/50 animate-pulse group-hover/skill:animate-none" />
+                      <div className="relative w-1.5 h-1.5">
+                        <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-accent group-hover/skill:scale-150 transition-transform duration-300" />
+                        <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-accent/50 animate-pulse group-hover/skill:animate-none" />
                       </div>
 
                       {/* Skill badge with hover effect */}
                       <Badge
                         variant="secondary"
-                        className="bg-accent/10 text-foreground hover:bg-accent/20 group-hover/skill:bg-accent/30 transition-all duration-300 cursor-default"
+                        className="bg-accent/10 text-foreground hover:bg-accent/20 group-hover/skill:bg-accent/30 transition-all duration-300 cursor-default text-xs py-1"
                       >
                         {skill}
                       </Badge>
@@ -155,12 +159,12 @@ export default function Skills() {
         </div>
 
         {/* Stats section */}
-        <div className="mt-20 grid md:grid-cols-4 gap-6">
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { label: "Years Experience", value: "5+" },
-            { label: "Projects Shipped", value: "15+" },
-            { label: "Team Members Led", value: "8+" },
-            { label: "Technologies", value: "25+" },
+            { label: "Components Built", value: "40+" },
+            { label: "Team Size Led", value: "5+" },
+            { label: "Bug Reduction", value: "25%" },
           ].map((stat, i) => (
             <div
               key={i}
@@ -169,7 +173,7 @@ export default function Skills() {
               <div className="text-3xl font-bold text-accent group-hover:scale-110 transition-transform duration-300">
                 {stat.value}
               </div>
-              <div className="text-sm text-foreground/70 mt-2">{stat.label}</div>
+              <div className="text-sm text-blue-300 mt-2">{stat.label}</div>
             </div>
           ))}
         </div>
