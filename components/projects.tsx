@@ -4,42 +4,61 @@ import { useEffect, useRef } from "react"
 
 const projects = [
   {
+    title: "ForthHome — AI 3D Architectural Studio",
+    description:
+      "Residential concept-design SaaS that converts natural-language client briefs into machine-validated 2D floor plans (topological reachability, daylight & stairwell constraints), interactive walkable Three.js PBR 3D models, instant construction BOQ/cost estimates, and client-ready presentation packs.",
+    tags: ["TypeScript", "Three.js / WebGL", "Generative AI", "Spatial Solver", "GLTF Export", "Node.js"],
+    period: "2026",
+    impact: "AI CAD & 3D Studio",
+    link: "https://github.com/UsmanQasim/house-builder",
+  },
+  {
+    title: "Dukaan — Hyperlocal Commerce & QR Pay SaaS",
+    description:
+      "Multi-tenant mobile & web platform for neighborhood shops featuring PostGIS spatial discovery, concurrency-safe seat booking (pg_advisory_xact_lock), state-machine pre-order queues, and verified Android App Links QR payment posters.",
+    tags: ["Expo SDK 57", "Next.js", "Supabase", "PostGIS", "PostgreSQL RLS", "React Query"],
+    period: "2026",
+    impact: "Multi-Tenant SaaS",
+    link: "https://github.com/UsmanQasim/store-for-all",
+  },
+  {
     title: "Chatley AI",
     description:
-      "Advanced Agentic AI platform leveraging LLM integrations for intelligent automation. Architected with Next.js, Node.js, and cloud infrastructure. Implemented complex AI workflows and real-time data processing with performance optimization at scale.",
-    tags: ["Agentic AI", "Next.js", "Node.js", "Amazon EC2", "LLM Integration", "Real-time Data"],
-    period: "2024 – Present",
-    impact: "AI Platform",
+      "Advanced Agentic AI platform leveraging LLM integrations for intelligent voice & SMS automation. Architected with Next.js, Node.js, and cloud infrastructure with real-time call streaming, tool-calling guardrails, and low-latency data processing.",
+    tags: ["Agentic AI", "Next.js", "Node.js", "Amazon EC2", "LLM Tool Calling", "Real-time Streaming"],
+    period: "2024 - Present",
+    impact: "Production AI Platform",
     link: "https://www.chatley.ai/",
+  },
+  {
+    title: "Ghar — Real Estate Marketplace Monorepo",
+    description:
+      "Full-stack property marketplace ecosystem organized as a Turborepo monorepo with a buyer/agent Expo mobile app, Next.js SEO listing portal, deep-link share micro-app, admin console, and a NestJS + Prisma + PostgreSQL API.",
+    tags: ["Turborepo", "Next.js", "Expo", "NestJS", "Prisma", "PostgreSQL"],
+    period: "2026",
+    impact: "Full-Stack Monorepo",
+    link: "https://github.com/UsmanQasim/ApnaGhar",
   },
   {
     title: "MavenX.gg",
     description:
-      "Game streaming platform (Twitch-like) with real-time streaming and analytics. Built UI with Next.js and Tailwind CSS, implemented data visualization via Recharts to boost user engagement.",
+      "Game streaming platform (Twitch-like) with real-time streaming and creator analytics. Built high-concurrency UI with Next.js and Tailwind CSS, implementing interactive telemetry visualization to boost viewer engagement.",
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "Recharts", "Microservices"],
-    period: "2023 – 2024",
+    period: "2023 - 2024",
     impact: "KSA Market",
   },
   {
     title: "Money Router (MR)",
     description:
-      "Fintech application with comprehensive financial management. Led frontend overhaul to Next.js improving load times and UI consistency. Built reusable components and optimized performance across the platform.",
+      "Enterprise fintech platform for cross-border financial management. Led the frontend migration to Next.js, cutting data retrieval latency by 70% and establishing a 40+ component design system.",
     tags: ["Next.js", "React Query", "Node.js", "Tailwind CSS", "Performance"],
-    period: "2022 – 2023",
+    period: "2022 - 2023",
     impact: "Enterprise Fintech",
-  },
-  {
-    title: "General Practitioner (GP)",
-    description:
-      "Healthcare platform with form-driven, responsive UI. Developed secure API integration, implemented role-based routing and form validation with Yup. Focused on accessibility and user experience.",
-    tags: ["React.js", "Material UI", "Redux", ".NET Core", "Healthcare"],
-    period: "2021 – 2023",
-    impact: "Healthcare Platform",
   },
 ]
 
 export default function Projects() {
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
+  const itemRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
